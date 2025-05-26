@@ -30,9 +30,15 @@ export default function Mainmenu() {
       </div>
       <header className={`main-menu ${menuOpen ? "active" : ""}`}>
         <ul>
+<<<<<<< Updated upstream
           <li><Link to="/trangchu">Trang chủ</Link></li>
           <li><Link to="/flashcard">Học tập</Link></li>
           <li><Link to="/lesson">Từ vựng chủ đề</Link></li>
+=======
+          <li><Link to="/lop1">Trang chủ</Link></li>
+          <li><Link to="/hoc-tap">Học tập</Link></li>
+          <li><Link to="/tu-vung">Từ vựng chủ đề</Link></li>
+>>>>>>> Stashed changes
           <li><Link to="/lo-trinh">Lộ trình</Link></li>
         </ul>
       </header>
