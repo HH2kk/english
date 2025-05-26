@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Mainmenu.css";
-import { Link } from 'react-router-dom'; // Nếu bạn muốn dùng Link cho điều hướng
+import { Link } from "react-router-dom";
 
 export default function Mainmenu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,8 +17,8 @@ export default function Mainmenu() {
 
   return (
     <div>
-      <div classname="container">
-        <img src="/images/background.png" />
+      <div className="container">
+        <img src="/images/background.png" alt="background" />
       </div>
       <div id="dino-toggle" onClick={handleDinoClick}>
         <img
@@ -30,9 +30,9 @@ export default function Mainmenu() {
       </div>
       <header className={`main-menu ${menuOpen ? "active" : ""}`}>
         <ul>
-          <li><Link to="/">Trang chủ</Link></li> {/* Sử dụng Link nếu bạn muốn điều hướng bằng React Router */}
-          <li><Link to="/hoc-tap">Học tập</Link></li>
-          <li><Link to="/tu-vung">Từ vựng chủ đề</Link></li>
+          <li><Link to="/trangchu">Trang chủ</Link></li>
+          <li><Link to="/flashcard">Học tập</Link></li>
+          <li><Link to="/lesson">Từ vựng chủ đề</Link></li>
           <li><Link to="/lo-trinh">Lộ trình</Link></li>
         </ul>
       </header>

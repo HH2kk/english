@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Class3.css";
-import { Link } from 'react-router-dom'; // Nếu bạn muốn dùng Link cho điều hướng
+import { Link } from 'react-router-dom'; 
 
 export default function Class3() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
+import Wordlist from "../components/wordlist";
 
 export default function Home() { 
   return (
     <div>
-      <Navbar />
+      <Wordlist />
     </div>
   );
 }
