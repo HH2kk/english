@@ -1,14 +1,14 @@
 .container {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    overflow-x: hidden;
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  overflow-x: hidden;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 /* Vùng chứa nút toggle hình khủng long */
@@ -31,70 +31,100 @@
 
 /* Menu chính ẩn hiện khi nhấn khủng long*/
 .main-menu {
-    position: absolute;
-    top: 36px;      /* sát với miệng khủng long */
-    left: 250px;   /* canh đúng miệng */
-    width: 600px;
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scaleX(0);              /* nén chiều ngang về 0 */
-    transform-origin: left center;   /* co/giãn từ phía bên phải → tức là từ miệng khủng long */
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.3s ease;
-    z-index: 999;
-    pointer-events: none;             /* tránh click khi ẩn */
-    background-color: white; 
+  position: fixed;
+  top: 36px; /* sát với miệng khủng long */
+  left: 250px; /* canh đúng miệng */
+  min-width: 750px;
+  padding: 2rem 9rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scaleX(0); /* nén chiều ngang về 0 */
+  transform-origin: left center; /* co/giãn từ phía bên phải → tức là từ miệng khủng long */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  z-index: 999;
+  pointer-events: none; /* tránh click khi ẩn */
+  background-color: white;
 }
 
 /* Khi bật menu */
 .main-menu.active {
-    transform: scaleX(1);
-    opacity: 1;
-    pointer-events: auto;
+  transform: scaleX(1);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Danh sách menu */
 .main-menu ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; /* khoảng cách giữa các nút */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* khoảng cách giữa các nút */
+  list-style: none; /* bỏ dấu chấm đầu dòng */
+  margin: 0;
+  padding: 0;
 }
 
-.main-menu li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-width: 100px;
-    height: 60px;
-    padding: 0 12px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    border-radius: 999px; /* tạo bo viên thuốc */
-    background-color: transparent;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    line-height: 1.2;
-    white-space: nowrap;
-    word-break: break-word; /* nếu cần bẻ chữ */
+.main-menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  height: 60px;
+  padding: 0 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 999px;
+  background-color: transparent;
+  transition: background-color 0.3s, transform 0.2s;
+  line-height: 1.2;
+  white-space: nowrap;
+  word-break: break-word;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-/* Hiệu ứng hover nếu bạn muốn */
-.main-menu li a:hover {
-    background-color: rgb(206, 205, 205); 
-    transform: scale(1.05);
+.main-menu-link:hover {
+  background-color: rgb(180, 181, 180);
+  transform: scale(1.05);
 }
 
+summary::-webkit-details-marker {
+  display: revert;
+  color: black;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 12px;
+  min-width: 160px;
+  z-index: 10;
+  padding: 10px 0;
+  margin-top: 5px;
+  background-color: white;
+  box-shadow: rgb(180, 181, 180) 0px 2px 8px;
+}
+
+.account-dropdown a {
+  margin-bottom: 10px;
+}
+
+.account-dropdown link:hover {
+  background-color: rgb(132, 135, 132);
+}
 @media (max-width: 768px) {
-    .menu {
-        font-size: 14px;
-    }
+  .menu {
+    font-size: 14px;
+  }
 }
+
+
+
+

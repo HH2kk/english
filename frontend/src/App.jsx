@@ -7,12 +7,16 @@ import Class33 from './pages/Class33';
 import StudyTopics from './pages/StudyTopics';
 import Study from './pages/Study';
 import LoTrinh from './components/LoTrinh';
+import Dangnhap from './pages/Dangnhap';
 
 function App() {
   return (
     <Router>
       <div>
         <Routes>
+          {/* Trang đăng nhập */}
+          <Route path="/dang-nhap" element={<Dangnhap />} />
+          {/* Trang chủ và các lớp học */}
           <Route path="/" element={<Home />} />
           <Route path="/fullclass" element={<Allclass />} />
           {/* lớp 1 */}
