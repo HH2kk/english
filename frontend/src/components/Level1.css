@@ -1,0 +1,131 @@
+.quiz-container {
+  min-height: 100vh;
+  background-color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.quiz-title {
+  margin-right: 1300px;
+  margin-top: -20px;
+  padding-bottom: 50px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.progress-bar-wrapper {
+  width: 100%;
+  max-width: 36rem;
+  height: 0.5rem;
+  background-color: rgba(164, 157, 157, 0.807);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: blue !important;
+  transition: width 0.3s ease-in-out;
+}
+
+.result-section {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.question-title {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.question-image {
+  margin-bottom: 1.5rem;
+  max-width: 16rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player {
+  margin-bottom: 1rem;
+}
+
+.options-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.option-card {
+  width: 10rem;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.option-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.option-card.selected {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.option-image {
+  height: 5rem;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+}
+
+.option-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.writing-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #9ca3af;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.check-button {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: none;
+  background-color: #10b981;
+  color: white;
+  margin: 0.5rem;
+}

@@ -1,0 +1,73 @@
+.pass1-container {
+  background-color: rgba(42, 212, 231, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pass1-box {
+  padding: 5px;
+  border-radius: 30px;
+  font-size: 2rem;
+  color: black;
+  position: relative;
+  border: 4px solid rgba(6, 10, 249, 0.1);
+}
+
+.pass1-text {
+    padding: 0 60px;
+    margin: 0;
+    border-radius: 20px;
+}
+
+/* Enter animation */
+.fade-in {
+  animation: fadeInMove 2s ease-out forwards;
+}
+
+/* Exit animation */
+.fade-out {
+  animation: fadeOutMove 4s ease-in-out forwards;
+}
+
+/* Done text */
+.pass1-done {
+  font-size: 2rem;
+  color: #333;
+}
+
+.fade-done {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeInMove {
+  0% {
+    transform: translateX(-300px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutMove {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

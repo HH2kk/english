@@ -1,0 +1,89 @@
+.lesson-list {
+  max-width: 700px;
+  margin: auto;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.back {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.lesson-card {
+  background-color: #80a8cf;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lesson-info h3 {
+  margin: 0 0 10px;
+  margin-top: -5px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100px;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #1dd05d;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: 14px;
+}
+
+.lesson-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lesson-actions button {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 120px;
+  height: 40px;
+  padding: 0 6px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 999px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.lesson-actions button:hover {
+  background-color: blue; 
+  transform: scale(1.05);
+}
+
+.lesson-actions img {
+  margin-bottom: -20px;
+  padding: 5px 10px;
+  width: 70px;
+  height: auto;
+  border: none;
+  background: transparent; 
+  box-shadow: none;
+}
