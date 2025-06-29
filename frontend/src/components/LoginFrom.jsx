@@ -1,8 +1,8 @@
 // src/LoginRegisterForm.jsx
 import React, { useState } from "react";
 import "./LoginFrom.css";
-import "./Mainmenu.css";
 import { useNavigate, Link } from "react-router-dom";
+import ThanhDieuHuong from "./ThanhDieuHuong";
 
 const LoginRegisterForm = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -10,9 +10,6 @@ const LoginRegisterForm = () => {
   const [password, setPassword] = useState("");
   const [status, setStatus] = useState("");
   const [showPass, setShowPass] = useState(false);
-
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [dinoSrc, setDinoSrc] = useState("/images/dino-1-removebg-preview.png");
 
   const navigate = useNavigate();
 
@@ -47,43 +44,9 @@ const LoginRegisterForm = () => {
     }
   };
 
-  const handleDinoClick = () => {
-    setMenuOpen(!menuOpen);
-    setDinoSrc(
-      !menuOpen
-        ? "/images/dino-2-removebg-preview.png"
-        : "/images/dino-1-removebg-preview.png"
-    );
-  };
-
   return (
     <div className="trang-dang-nhap">
-      <div id="dino-toggle" onClick={handleDinoClick}>
-        <img
-          id="dino-img"
-          src={dinoSrc}
-          alt="Khủng long"
-          style={{ transform: "scaleX(-1)" }}
-        />
-      </div>
-
-      <header className={`main-menu ${menuOpen ? "active" : ""}`}>
-        <ul>
-          <li>
-            <Link to="/lop1">Trang chủ</Link>
-          </li>
-          <li>
-            <Link to="/hoc-tap">Học tập</Link>
-          </li>
-          <li>
-            <Link to="/tu-vung">Từ vựng chủ đề</Link>
-          </li>
-          <li>
-            <Link to="/lo-trinh">Lộ trình</Link>
-          </li>
-        </ul>
-      </header>
-
+      <ThanhDieuHuong />
       <div className={`login-form ${isLogin ? "" : "register-mode"}`}>
         <div className="login-form-left">
           <h2>
@@ -111,7 +74,6 @@ const LoginRegisterForm = () => {
               ? "Chưa có tài khoản? Đăng ký"
               : "Đã có tài khoản? Đăng nhập"}
           </button>
-
         </div>
         <div className="login-form-right">
           <form onSubmit={handleSubmit}>
@@ -138,7 +100,12 @@ const LoginRegisterForm = () => {
                   className="show-pass-btn"
                   onClick={() => setShowPass((v) => !v)}
                   tabIndex={-1}
-                  style={{ cursor: "pointer", border: "none", background: "none", fontSize: "1.2rem" }}
+                  style={{
+                    cursor: "pointer",
+                    border: "none",
+                    background: "none",
+                    fontSize: "1.2rem",
+                  }}
                 >
                   {showPass ? "🙈" : "👁️"}
                 </button>
@@ -147,7 +114,8 @@ const LoginRegisterForm = () => {
             {status && (
               <p
                 className={
-                  status === "Đăng nhập thành công!" || status === "Đăng ký thành công! Bạn có thể đăng nhập."
+                  status === "Đăng nhập thành công!" ||
+                  status === "Đăng ký thành công! Bạn có thể đăng nhập."
                     ? "status-success"
                     : "error"
                 }
@@ -156,9 +124,9 @@ const LoginRegisterForm = () => {
               </p>
             )}
             <div className="button-row">
-
-              <button type="submit">{isLogin ? "Đăng Nhập" : "Đăng Ký"}</button>
-              
+              <button type="submit">
+                {isLogin ? "Đăng Nhập" : "Đăng Ký"}
+              </button>
             </div>
           </form>
         </div>
